@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.cover {
+    position: relative;
+}
+
+.cover .cover-item {
+    display: none;
+}
+
+.cover-item.active {
+    display: block;
+}
+
+.cover .cover-img {
+    height: 500px;
+    width: 900px;
+}
+
+.cover .cover-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cover .text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    text-align: right;
+    width: 80%;
+}
+
+.cover .text h2 {
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.thumbnails .thumb-item {
+    height: 100px;
+    opacity: .5;
+}
+
+.thumbnails .thumb-item.active {
+    border: 3px solid darkorange;
+    opacity: 1;
+}
+
+.thumbnails .thumb-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.thumbnails .btn {
+    background-color: darkorange;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.thumbnails .btn.next {
+    bottom: 10px;
+}
+
+.thumbnails .btn.prev {
+    top: 10px;
+}
